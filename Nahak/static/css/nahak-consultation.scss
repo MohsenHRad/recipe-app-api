@@ -1,0 +1,156 @@
+.nahak-consultation {
+    font-size: 15px;
+    .main-box {
+        border-radius: 1.25em;
+        display: flex;
+        padding: 1.5em 2.5em 0 3em;
+        align-items: center;
+        column-gap: 2em;
+        position: relative;
+        overflow: hidden;
+        background: #119699;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: url(../images/home/consultation/bg-1.png) no-repeat,
+                url(../images/home/consultation/bg-2.png) repeat-y right;
+        }
+
+        img {
+            width: 11.25em;
+            align-self: flex-end;
+            position: relative;
+        }
+
+        & > div {
+            display: flex;
+            column-gap: 2em;
+            align-items: center;
+            position: relative;
+
+            .texts {
+                h3 {
+                    font-weight: 900;
+                    font-size: 2em;
+                    line-height: 1.5em;
+                    color: #ffffff;
+                    margin-bottom: 0;
+                }
+                p {
+                    font-weight: 400;
+                    font-size: 0.87em;
+                    line-height: 2.57em;
+                    margin-top: 1em;
+                    color: #ffffff;
+                }
+            }
+            a {
+                font-size: 0.95em;
+                background: #fff;
+                border-radius: 0.625em;
+                color: #119699;
+                text-decoration: none;
+                padding: 1em 1.5em;
+                font-weight: 500;
+                display: block;
+                width: fit-content;
+                flex-shrink: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 1em;
+                margin-right: auto;
+
+                &::after {
+                    content: "";
+                    width: 1.1em;
+                    height: 1em;
+                    background: url(../images/home/arrow-left-green.svg);
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    display: block;
+                    flex-shrink: 0;
+                    transition: all ease-in-out 0.2s;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .nahak-consultation {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .nahak-consultation {
+        font-size: 14px;
+        .main-box {
+            & > div {
+                display: flex;
+                flex-direction: column;
+                .texts {
+                    h3 {
+                        font-size: 1.8em;
+                    }
+                }
+                a {
+                    margin-bottom: 2em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .nahak-consultation {
+        font-size: 14px;
+        .main-box {
+            flex-direction: row-reverse;
+            &::before {
+                background-size: 0, auto;
+                opacity: 0.4;
+            }
+            & > div {
+                align-items: flex-start;
+                a {
+                    margin-right: 0;
+                    margin-top: 1.5em;
+                }
+
+                .texts {
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .nahak-consultation {
+        font-size: 13px;
+        .main-box {
+            padding: 2em 2em 0 2em;
+            column-gap: 1em;
+
+            img {
+                min-width: 10em;
+            }
+            & > div {
+                .texts {
+                    h3 {
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}

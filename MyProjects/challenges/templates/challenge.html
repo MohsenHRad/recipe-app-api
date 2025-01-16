@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_title %}
+    Days Info
+{% endblock %}
+
+{% block header_references %}
+    <link rel="stylesheet" href="{% static 'challenges\challenge.css' %}">
+    <link rel="stylesheet" href="{% static 'challenges\header.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% include "includes/header.html" with active_page="days detail" %}
+    <h1>This is first django page by Html & Python :)</h1>
+
+    <h2> {{ data_1|title }} </h2>
+    {% if data_2 is not None %}
+        <h2> {{ data_2 }} </h2>
+    {% else %}
+        <p>There is no Data</p>
+    {% endif %}
+
+{% endblock %}

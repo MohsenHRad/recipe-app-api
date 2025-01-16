@@ -1,0 +1,245 @@
+.why-nahak-po {
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.why-nahak-po .custom-cols {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.why-nahak-po .custom-cols .custom-col {
+  width: 50%;
+}
+
+.why-nahak-po .custom-cols .custom-col.col-desc {
+  padding-left: 2.5em;
+  align-self: center;
+}
+
+.why-nahak-po .custom-cols .custom-col.col-img {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  height: fit-content;
+}
+
+.why-nahak-po .custom-cols .custom-col.col-img img {
+  border: 1.3em solid #ffc484;
+  border-radius: 0px 18.62em;
+  width: 36em;
+  height: 49em;
+  object-fit: cover;
+  position: relative;
+  transform: translate(0.65em, 0.65em);
+  max-width: 100%;
+}
+
+.why-nahak-po .custom-cols .custom-col.col-img::before {
+  content: "";
+  position: absolute;
+  right: 40%;
+  top: 50%;
+  background: #0a7a7d;
+  height: 36em;
+  max-height: 100%;
+  border-radius: 5em;
+  width: 100vw;
+  transform: translate3d(0, -50%, 0);
+}
+
+.why-nahak-po .custom-cols .custom-col:nth-of-type(1) {
+  padding: 0 0 2.5em 2.5em;
+}
+
+.why-nahak-po .custom-cols .custom-col:nth-of-type(3) {
+  justify-content: flex-end;
+  align-self: flex-start;
+}
+
+.why-nahak-po .custom-cols .custom-col:nth-of-type(3) img {
+  border-color: #119699;
+  transform: translate(-0.65em, -0.65em);
+}
+
+.why-nahak-po .custom-cols .custom-col:nth-of-type(3)::before {
+  left: 40%;
+  right: unset;
+  background: #ffc484;
+  transform: translate3d(0, -50%, 0);
+}
+
+.why-nahak-po .custom-cols .custom-col:nth-of-type(4) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2.5em;
+  padding-left: 0;
+}
+
+@media only screen and (max-width: 1279px) {
+  .why-nahak-po {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .why-nahak-po {
+    font-size: 5px;
+  }
+  .why-nahak-po .custom-cols {
+    flex-direction: column;
+  }
+  .why-nahak-po .custom-cols .col-desc {
+    width: 100%;
+    padding: 0 !important;
+  }
+  .why-nahak-po .custom-cols .custom-col:nth-of-type(3) {
+    margin-top: -25em;
+  }
+  .why-nahak-po .custom-cols .custom-col:nth-of-type(4) {
+    justify-content: flex-start;
+  }
+  .why-nahak-po .custom-cols .custom-col:nth-of-type(2) {
+    margin-top: 8em;
+  }
+  .why-nahak-po .custom-cols .custom-col:nth-of-type(3) {
+    margin-bottom: 8em;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .why-nahak-po .custom-cols .custom-col.col-img {
+    width: 70%;
+  }
+  .why-nahak-po .custom-cols .custom-col.col-img::before {
+    height: 25em;
+  }
+  .why-nahak-po .custom-cols .custom-col.col-img img {
+    border-width: 2.3em;
+    transform: none;
+  }
+  .why-nahak-po .custom-cols .custom-col:nth-of-type(2) img {
+    width: 40em;
+  }
+  .why-nahak-po .custom-cols .custom-col:nth-of-type(3) {
+    width: 60%;
+    margin-top: -2.2em;
+  }
+  .why-nahak-po .custom-cols .custom-col:nth-of-type(3) img {
+    height: 40em;
+  }
+}
+
+.why-nahak {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+}
+
+.why-nahak > .title {
+  font-weight: 700;
+  font-size: 3em;
+  color: #03191d;
+  margin-bottom: 0;
+}
+
+.why-nahak > .sub-title {
+  font-weight: 400;
+  font-size: 13px;
+  color: #fb782f;
+  margin-bottom: 0;
+}
+
+.why-nahak > .sub-title-2 {
+  font-weight: 400;
+  font-size: 13px;
+  color: #119699;
+  margin-bottom: 0;
+}
+
+.why-nahak > .desc {
+  font-weight: 300;
+  font-size: 1.125em;
+  line-height: 2.8em;
+  color: #4d6071;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1279px) {
+  .why-nahak {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .why-nahak {
+    font-size: 12px;
+  }
+  .why-nahak > .title {
+    font-size: 2.65em;
+  }
+}
+
+.nahak-list-icon {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.8em;
+}
+
+.nahak-list-icon > div {
+  display: flex;
+  align-items: center;
+  column-gap: 1.31em;
+}
+
+.nahak-list-icon > div .img-wrapper {
+  background: #ffc484;
+  border-radius: 13px;
+  width: 3.19em;
+  height: 3.19em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4em;
+  flex-shrink: 0;
+}
+
+.nahak-list-icon > div .img-wrapper img {
+  width: 1.5em;
+  max-height: 100%;
+}
+
+.nahak-list-icon > div .texts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+}
+
+.nahak-list-icon > div .texts h4 {
+  font-weight: 500;
+  font-size: 1.25em;
+  color: #4d6071;
+}
+
+.nahak-list-icon > div .texts div {
+  font-weight: 400;
+  font-size: 0.937em;
+  color: #7a8c9c;
+}
+
+@media only screen and (max-width: 1279px) {
+  .nahak-list-icon {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nahak-list-icon {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,28 @@
+.nahak-para-wrapper {
+  font-size: 15px;
+}
+
+.nahak-para-wrapper .nahak-para {
+  font-weight: 300;
+  font-size: 1.125em;
+  line-height: 3.05em;
+  color: #4d6071;
+}
+
+@media only screen and (max-width: 991px) {
+  .nahak-para-wrapper {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nahak-para-wrapper {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .nahak-para-wrapper {
+    font-size: 12px;
+  }
+}

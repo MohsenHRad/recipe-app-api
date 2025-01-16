@@ -1,0 +1,117 @@
+.about-job {
+  position: relative;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.about-job::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4em;
+  bottom: 0;
+  width: 100%;
+  background: #f2f7fa;
+}
+
+.about-job::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: url(../../images/about/about-bg.png) no-repeat;
+  background-position: -1.5em 0;
+  background-size: 12.12em;
+}
+
+.about-job .container {
+  padding-top: 1em;
+  padding-bottom: 0.7em;
+}
+
+.about-job .container .col-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.about-job .container .col-img img {
+  width: 25.6em;
+  max-width: 100%;
+}
+
+.about-job .container .col-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-job .container .col-main .texts {
+  padding: 6em 3em 2em 0;
+}
+
+.about-job .container .col-main .texts > h3 {
+  font-weight: 700;
+  font-size: 2.56em;
+  color: #000000;
+  margin-bottom: 0;
+}
+
+.about-job .container .col-main .texts .para {
+  font-weight: 300;
+  font-size: 1.065em;
+  line-height: 3.76em;
+  color: #495961;
+  margin-top: 3em;
+}
+
+@media only screen and (max-width: 1279px) {
+  .about-job {
+    font-size: 14px;
+  }
+  .about-job .col-main .texts {
+    padding-right: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 991px) {
+  .about-job .col-main .texts {
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .about-job {
+    font-size: 13px;
+  }
+  .about-job .container .col-main .texts {
+    padding: 5em 0em 2em 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-job {
+    font-size: 12px;
+  }
+  .about-job .container .col-main .texts > h3 {
+    font-size: 2.4em;
+    line-height: 1.75em;
+  }
+  .about-job .container .col-main .texts .para {
+    margin-top: 2em;
+    font-size: 1.13em;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .about-job::after {
+    content: none;
+  }
+  .about-job .container .col-img img {
+    width: 22em;
+  }
+}

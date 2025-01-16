@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "kordestan-icomoon";
+    src: url("../fonts/font-icons/kordestan-icomoon.eot?cqiwhg");
+    src: url("../fonts/font-icons/kordestan-icomoon.eot?cqiwhg#iefix") format("embedded-opentype"),
+        url("../fonts/font-icons/kordestan-icomoon.ttf?cqiwhg") format("truetype"),
+        url("../fonts/font-icons/kordestan-icomoon.woff?cqiwhg") format("woff"),
+        url("../fonts/font-icons/kordestan-icomoon.svg?cqiwhg#kordestan-icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="kord-icon-"],
+[class*=" kord-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "kordestan-icomoon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="kord-icon-"] *,
+[class*=" kord-icon-"] * {
+    font-family: "kordestan-icomoon" !important;
+}
+
+.kord-icon-close:before {
+    content: "\e901";
+}
+.kord-icon-bolandgoo:before {
+    content: "\e900";
+    color: #fff;
+}
+.kord-icon-down:before {
+    content: "\e902";
+    color: #f9f9f9;
+}
+.kord-icon-mouse .path1:before {
+    content: "\e903";
+    color: rgb(242, 242, 242);
+}
+.kord-icon-mouse .path2:before {
+    content: "\e904";
+    margin-left: -1em;
+    color: rgb(224, 224, 224);
+}
+.kord-icon-lang:before {
+    content: "\e905";
+}
+.kord-icon-next:before {
+    content: "\e906";
+    color: #f9f9f9;
+}
+.kord-icon-open-menu:before {
+    content: "\e907";
+    color: #fcfcfc;
+}
+.kord-icon-play:before {
+    content: "\e908";
+    color: #dadada;
+}
+.kord-icon-prev:before {
+    content: "\e909";
+    color: #f9f9f9;
+}
+.kord-icon-print:before {
+    content: "\e90a";
+    color: #fff;
+}
+.kord-icon-puse:before {
+    content: "\e90b";
+    color: #fff;
+}
+.kord-icon-search .path1:before {
+    content: "\e90c";
+    color: rgb(255, 255, 255);
+}
+.kord-icon-search .path2:before {
+    content: "\e90d";
+    margin-left: -1em;
+    color: rgb(0, 38, 135);
+}
+.kord-icon-share:before {
+    content: "\e90e";
+    color: #fff;
+}
+.kord-icon-time:before {
+    content: "\e90f";
+    font-weight: bold;
+    color: #00b0d7;
+}
+.kord-icon-up:before {
+    content: "\e910";
+    color: #f9f9f9;
+}
+.kord-icon-user:before {
+    content: "\e911";
+    color: #fff;
+}

@@ -1,0 +1,522 @@
+.nahak-ES {
+  overflow: hidden;
+  position: relative;
+  padding: 2.5em 0;
+  font-size: 15px;
+}
+
+.nahak-ES > .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nahak-ES h3.po-title {
+  font-weight: 700;
+  font-size: 2.93em;
+  color: #03191d;
+  margin-bottom: 0;
+}
+
+.nahak-ES h3.po-title span {
+  color: #119699;
+}
+
+.nahak-ES .po-subtitle {
+  margin-top: 1.37em;
+  font-weight: 300;
+  font-size: 1em;
+  color: #4d6071;
+  margin-bottom: 0;
+}
+
+.nahak-ES a.more {
+  font-size: 1.12em;
+  background: #fff;
+  border-radius: 0.625em;
+  border: 1px solid #119699;
+  color: #119699;
+  text-decoration: none;
+  padding: 1.1em 1.5em;
+  font-weight: 400;
+  display: block;
+  width: max-content;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1em;
+}
+
+.nahak-ES a.more::before {
+  content: "";
+  width: 1.3em;
+  height: 1.3em;
+  background: url(../images/home/eye.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: block;
+  transition: all ease-in-out 0.2s;
+}
+
+.nahak-ES div.w-100 {
+  margin-top: 2.5em;
+}
+
+.nahak-ES div.w-100 .row {
+  row-gap: 2.61em;
+}
+
+@media only screen and (max-width: 991px) {
+  .nahak-ES {
+    font-size: 14px;
+  }
+  .nahak-ES h3.po-title {
+    font-size: 2.3em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nahak-ES {
+    font-size: 13px;
+  }
+  .nahak-ES > .container a.more {
+    order: 3;
+    width: 100%;
+    margin-top: 1em;
+  }
+  .nahak-ES > .container .texts {
+    order: 1;
+  }
+  .nahak-ES > .container .w-100 {
+    order: 2;
+  }
+}
+
+.parent-NES-swiper {
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.parent-NES-swiper .NES-swiper {
+  width: 100%;
+  overflow: visible;
+}
+
+.parent-NES-swiper .NES-swiper .swiper-slide .work {
+  transition: all ease-in-out 0.3s;
+  display: block;
+  text-decoration: none;
+}
+
+.parent-NES-swiper .NES-swiper .swiper-slide .work .parent-img {
+  left: 0;
+  top: 0;
+  height: 18em;
+}
+
+.parent-NES-swiper .NES-swiper .swiper-slide .work .parent-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75em;
+}
+
+.parent-NES-swiper .NES-swiper .swiper-slide .work .contents {
+  width: 100%;
+  margin: 0;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.parent-NES-swiper .NES-swiper .swiper-slide .work .contents .name {
+  font-weight: 700;
+  font-size: 1.06em;
+  line-height: 2em;
+  margin-bottom: 0;
+  color: #495961;
+}
+
+.parent-NES-swiper .NES-swiper .swiper-slide .work .contents .category {
+  display: flex;
+  align-items: center;
+  column-gap: 0.56em;
+}
+
+.parent-NES-swiper .NES-swiper .swiper-slide .work .contents .category svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.parent-NES-swiper .NES-swiper .swiper-slide .work .contents .category svg use {
+  stroke: #4d6071 !important;
+}
+
+.parent-NES-swiper .NES-swiper .swiper-slide .work .contents .category span {
+  font-weight: 400;
+  font-size: 0.93em;
+  color: #4d6071;
+}
+
+.parent-NES-swiper .NES-swiper .swiper-slide .work .contents span.date {
+  font-weight: 300;
+  font-size: 1.18em;
+  color: #9cb0b9;
+}
+
+@media only screen and (max-width: 991px) {
+  .parent-NES-swiper {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .parent-NES-swiper {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .parent-NES-swiper {
+    width: 20em;
+    overflow: visible;
+  }
+  .parent-NES-swiper .NES-swiper .swiper-slide:not(.swiper-slide-visible) .work {
+    transform: translateY(-0.69em);
+  }
+}
+
+.parent-NES-swiper-2 {
+  overflow: hidden;
+  position: relative;
+  font-size: 15px;
+}
+
+.parent-NES-swiper-2 .NES-swiper-2 {
+  width: 100%;
+}
+
+.parent-NES-swiper-2 .NES-swiper-2 .swiper-slide {
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.75em;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  text-decoration: none;
+}
+
+.parent-NES-swiper-2 .NES-swiper-2 .swiper-slide::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(3, 25, 29, 0) 0%, #03191d 100%);
+}
+
+.parent-NES-swiper-2 .NES-swiper-2 .swiper-slide .contents {
+  height: 27em;
+  width: 100%;
+  margin: 0;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  row-gap: 0.85em;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.parent-NES-swiper-2 .NES-swiper-2 .swiper-slide .contents .name {
+  font-weight: 700;
+  font-size: 1.06em;
+  line-height: 2em;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.parent-NES-swiper-2 .NES-swiper-2 .swiper-slide .contents .category {
+  display: flex;
+  align-items: center;
+  column-gap: 0.56em;
+}
+
+.parent-NES-swiper-2 .NES-swiper-2 .swiper-slide .contents .category svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.parent-NES-swiper-2 .NES-swiper-2 .swiper-slide .contents .category svg use {
+  stroke: #fff !important;
+}
+
+.parent-NES-swiper-2 .NES-swiper-2 .swiper-slide .contents .category span {
+  font-weight: 400;
+  font-size: 0.93em;
+  color: #fff;
+}
+
+.parent-NES-swiper-2 .NES-swiper-2 .swiper-slide .contents span.date {
+  font-weight: 300;
+  font-size: 1.12em;
+  color: #fff;
+}
+
+.parent-NES-swiper-2 .NES-swiper-2-pagination {
+  z-index: 5;
+  position: absolute;
+  bottom: 1.5em !important;
+  left: 1.5em !important;
+  display: flex;
+  width: fit-content !important;
+}
+
+.parent-NES-swiper-2 .NES-swiper-2-pagination .swiper-pagination-bullet {
+  width: 0.69em;
+  height: 0.25em;
+  background: #fff;
+  opacity: 0.9;
+  margin: 0 0.14em !important;
+  border-radius: 3px;
+  transition: all ease-in-out 0.3s;
+}
+
+.parent-NES-swiper-2 .NES-swiper-2-pagination .swiper-pagination-bullet-active {
+  background: #119699;
+  width: 1.8em;
+}
+
+@media only screen and (max-width: 991px) {
+  .parent-NES-swiper-2 {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .parent-NES-swiper-2 {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .parent-NES-swiper-2 .NES-swiper-2 .swiper-slide .contents {
+    height: 20.38em;
+  }
+}
+
+.nahak-ES-po {
+  font-size: 15px;
+  overflow: hidden;
+  position: relative;
+  padding: 4.5em 0 4.5em 0;
+}
+
+.nahak-ES-po h3.po-title {
+  font-weight: 700;
+  font-size: 1.93em;
+  color: #161825;
+}
+
+.nahak-ES-po .po-subtitle {
+  font-weight: 300;
+  font-size: 0.81em;
+  color: #65697b;
+  margin-top: 1.4em;
+}
+
+.nahak-ES-po > .container > .row {
+  margin-top: 2.1em;
+}
+
+.nahak-ES-po > .container > .row .NES-archive {
+  margin-top: 2em;
+}
+
+.nahak-ES-po > .container > .row .col-other {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.3em;
+}
+
+@media only screen and (max-width: 991px) {
+  .nahak-ES-po {
+    font-size: 14px;
+  }
+  .nahak-ES-po .col-other {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nahak-ES-po {
+    font-size: 13px;
+  }
+}
+
+.NES-archive {
+  font-size: 15px;
+  row-gap: 2.2em;
+}
+
+.NES-archive > div a.item {
+  transition: all ease-in-out 0.3s;
+  display: block;
+  text-decoration: none;
+}
+
+.NES-archive > div a.item .parent-img {
+  left: 0;
+  top: 0;
+  height: 18.81em;
+}
+
+.NES-archive > div a.item .parent-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75em;
+}
+
+.NES-archive > div a.item .contents {
+  width: 100%;
+  margin: 0;
+  padding: 1em 0 0 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.NES-archive > div a.item .contents .name {
+  font-weight: 700;
+  font-size: 1.06em;
+  line-height: 2em;
+  margin-bottom: 0;
+  color: #495961;
+}
+
+.NES-archive > div a.item .contents .category {
+  display: flex;
+  align-items: center;
+  column-gap: 0.56em;
+}
+
+.NES-archive > div a.item .contents .category svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.NES-archive > div a.item .contents .category svg use {
+  stroke: #4d6071 !important;
+}
+
+.NES-archive > div a.item .contents .category span {
+  font-weight: 400;
+  font-size: 0.93em;
+  color: #4d6071;
+}
+
+.NES-archive > div a.item .contents span.date {
+  font-weight: 300;
+  font-size: 1.18em;
+  color: #9cb0b9;
+}
+
+@media only screen and (max-width: 991px) {
+  .NES-archive {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .NES-archive {
+    font-size: 13px;
+  }
+}
+
+.notifications-wrapper .title {
+  display: flex;
+  align-items: center;
+  column-gap: 0.7em;
+  margin-bottom: 1.25em;
+}
+
+.notifications-wrapper .title h4 {
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #1f2435;
+  margin-bottom: 0;
+}
+
+.notifications-wrapper .title svg {
+  width: 2.81em;
+  height: 2.81em;
+}
+
+@media only screen and (max-width: 991px) {
+  .notifications-wrapper {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .notifications-wrapper {
+    font-size: 13px;
+  }
+}
+
+.notifications {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25em;
+}
+
+.notifications > div {
+  background: #f7f9fc;
+  border-radius: 0.562em;
+  padding: 1.25em;
+  position: relative;
+  overflow: hidden;
+}
+
+.notifications > div::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background: #ffa115;
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 50%;
+  transform: translate3d(50%, -50%, 0);
+}
+
+.notifications > div h3 {
+  font-weight: 400;
+  font-size: 0.875em;
+  color: #131628;
+  line-height: 2em;
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 991px) {
+  .notifications {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .notifications {
+    font-size: 13px;
+  }
+}

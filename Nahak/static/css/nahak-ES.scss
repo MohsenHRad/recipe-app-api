@@ -1,0 +1,530 @@
+.nahak-ES {
+    overflow: hidden;
+    position: relative;
+    padding: 2.5em 0;
+    font-size: 15px;
+
+    & > .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h3.po-title {
+        font-weight: 700;
+        font-size: 2.93em;
+        color: #03191d;
+        margin-bottom: 0;
+
+        span {
+            color: #119699;
+        }
+    }
+
+    .po-subtitle {
+        margin-top: 1.37em;
+        font-weight: 300;
+        font-size: 1em;
+        color: #4d6071;
+        margin-bottom: 0;
+    }
+
+    a.more {
+        font-size: 1.12em;
+        background: #fff;
+        border-radius: 0.625em;
+        border: 1px solid #119699;
+        color: #119699;
+        text-decoration: none;
+        padding: 1.1em 1.5em;
+        font-weight: 400;
+        display: block;
+        width: max-content;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 1em;
+
+        &::before {
+            content: "";
+            width: 1.3em;
+            height: 1.3em;
+            background: url(../images/home/eye.svg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            display: block;
+            transition: all ease-in-out 0.2s;
+        }
+    }
+
+    div.w-100 {
+        margin-top: 2.5em;
+        .row {
+            row-gap: 2.61em;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .nahak-ES {
+        font-size: 14px;
+
+        h3.po-title {
+            font-size: 2.3em;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .nahak-ES {
+        font-size: 13px;
+
+        & > .container {
+            a.more {
+                order: 3;
+                width: 100%;
+                margin-top: 1em;
+            }
+            .texts {
+                order: 1;
+            }
+            .w-100 {
+                order: 2;
+            }
+        }
+    }
+}
+
+.parent-NES-swiper {
+    overflow: hidden;
+    font-size: 15px;
+    .NES-swiper {
+        width: 100%;
+        overflow: visible;
+
+        .swiper-slide {
+            .work {
+                transition: all ease-in-out 0.3s;
+                display: block;
+                text-decoration: none;
+
+                .parent-img {
+                    left: 0;
+                    top: 0;
+                    height: 18em;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 0.75em;
+                    }
+                }
+
+                .contents {
+                    width: 100%;
+                    margin: 0;
+                    padding: 1em 0;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 1em;
+
+                    .name {
+                        font-weight: 700;
+                        font-size: 1.06em;
+                        line-height: 2em;
+                        margin-bottom: 0;
+                        color: #495961;
+                    }
+
+                    .category {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 0.56em;
+                        svg {
+                            width: 1.25em;
+                            height: 1.25em;
+
+                            use {
+                                stroke: #4d6071 !important;
+                            }
+                        }
+                        span {
+                            font-weight: 400;
+                            font-size: 0.93em;
+                            color: #4d6071;
+                        }
+                    }
+
+                    span.date {
+                        font-weight: 300;
+                        font-size: 1.18em;
+                        color: #9cb0b9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .parent-NES-swiper {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .parent-NES-swiper {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .parent-NES-swiper {
+        width: 20em;
+        overflow: visible;
+
+        .NES-swiper {
+            .swiper-slide {
+                &:not(.swiper-slide-visible) .work {
+                    transform: translateY(-0.69em);
+                }
+            }
+        }
+    }
+}
+
+.parent-NES-swiper-2 {
+    overflow: hidden;
+    position: relative;
+    font-size: 15px;
+
+    .NES-swiper-2 {
+        width: 100%;
+
+        .swiper-slide {
+            overflow: hidden;
+            position: relative;
+            border-radius: 0.75em;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            text-decoration: none;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 50%;
+                width: 100%;
+                background: linear-gradient(180deg, rgba(3, 25, 29, 0) 0%, #03191d 100%);
+            }
+
+            .contents {
+                height: 27em;
+                width: 100%;
+                margin: 0;
+                padding: 1.5em;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                row-gap: 0.85em;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+
+                .name {
+                    font-weight: 700;
+                    font-size: 1.06em;
+                    line-height: 2em;
+                    margin-bottom: 0;
+                    color: #fff;
+                }
+
+                .category {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 0.56em;
+                    svg {
+                        width: 1.25em;
+                        height: 1.25em;
+
+                        use {
+                            stroke: #fff !important;
+                        }
+                    }
+                    span {
+                        font-weight: 400;
+                        font-size: 0.93em;
+                        color: #fff;
+                    }
+                }
+
+                span.date {
+                    font-weight: 300;
+                    font-size: 1.12em;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .NES-swiper-2-pagination {
+        z-index: 5;
+        position: absolute;
+        bottom: 1.5em !important;
+        left: 1.5em !important;
+        display: flex;
+        width: fit-content !important;
+
+        .swiper-pagination-bullet {
+            width: 0.69em;
+            height: 0.25em;
+            background: #fff;
+            opacity: 0.9;
+            margin: 0 0.14em !important;
+            border-radius: 3px;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #119699;
+            width: 1.8em;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .parent-NES-swiper-2 {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .parent-NES-swiper-2 {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .parent-NES-swiper-2 {
+        .NES-swiper-2 .swiper-slide .contents {
+            height: 20.38em;
+        }
+    }
+}
+
+.nahak-ES-po {
+    font-size: 15px;
+    overflow: hidden;
+    position: relative;
+    padding: 4.5em 0 4.5em 0;
+
+    h3.po-title {
+        font-weight: 700;
+        font-size: 1.93em;
+        color: #161825;
+    }
+
+    .po-subtitle {
+        font-weight: 300;
+        font-size: 0.81em;
+        color: #65697b;
+        margin-top: 1.4em;
+    }
+
+    & > .container > .row {
+        margin-top: 2.1em;
+
+        .NES-archive {
+            margin-top: 2em;
+        }
+
+        .col-other {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2.3em;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .nahak-ES-po {
+        font-size: 14px;
+
+        .col-other {
+            display: none !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .nahak-ES-po {
+        font-size: 13px;
+    }
+}
+
+.NES-archive {
+    font-size: 15px;
+    row-gap: 2.2em;
+    & > div {
+        a.item {
+            transition: all ease-in-out 0.3s;
+            display: block;
+            text-decoration: none;
+
+            .parent-img {
+                left: 0;
+                top: 0;
+                height: 18.81em;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 0.75em;
+                }
+            }
+
+            .contents {
+                width: 100%;
+                margin: 0;
+                padding: 1em 0 0 0;
+                display: flex;
+                flex-direction: column;
+                row-gap: 1em;
+
+                .name {
+                    font-weight: 700;
+                    font-size: 1.06em;
+                    line-height: 2em;
+                    margin-bottom: 0;
+                    color: #495961;
+                }
+
+                .category {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 0.56em;
+                    svg {
+                        width: 1.25em;
+                        height: 1.25em;
+
+                        use {
+                            stroke: #4d6071 !important;
+                        }
+                    }
+                    span {
+                        font-weight: 400;
+                        font-size: 0.93em;
+                        color: #4d6071;
+                    }
+                }
+
+                span.date {
+                    font-weight: 300;
+                    font-size: 1.18em;
+                    color: #9cb0b9;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .NES-archive {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .NES-archive {
+        font-size: 13px;
+    }
+}
+
+.notifications-wrapper {
+    .title {
+        display: flex;
+        align-items: center;
+        column-gap: 0.7em;
+        margin-bottom: 1.25em;
+
+        h4 {
+            font-weight: 700;
+            font-size: 1.5em;
+            color: #1f2435;
+            margin-bottom: 0;
+        }
+
+        svg {
+            width: 2.81em;
+            height: 2.81em;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .notifications-wrapper {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .notifications-wrapper {
+        font-size: 13px;
+    }
+}
+
+.notifications {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25em;
+
+    & > div {
+        background: #f7f9fc;
+        border-radius: 0.562em;
+        padding: 1.25em;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            background: #ffa115;
+            width: 1.25em;
+            height: 1.25em;
+            border-radius: 50%;
+            transform: translate3d(50%, -50%, 0);
+        }
+
+        h3 {
+            font-weight: 400;
+            font-size: 0.875em;
+            color: #131628;
+            line-height: 2em;
+            margin-bottom: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .notifications {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .notifications {
+        font-size: 13px;
+    }
+}

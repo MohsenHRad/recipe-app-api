@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_references %}
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock %}
+{% block title %}
+    My Blog
+{% endblock %}
+
+{% block content %}
+
+    <section id="welcome">
+        <header>
+
+            <img src="{% static 'blog/images/master.jpg' %}" alt="Mohsen.H.Rad">
+            <h2>Welcome to my Blog Page :)</h2>
+
+        </header>
+        <p>Hi , My name is Mohsen ; I'm a Programmer </p>
+    </section>
+
+    <section id="latest_posts">
+        <h2>Latest Post</h2>
+        <ul>
+
+            {% for post in latest_posts %}
+{#                <p>{{ post.title }}</p>#}
+                {% include 'include/post.html' %}
+            {% endfor %}
+
+        </ul>
+
+
+    </section>
+
+    <section id="about">
+
+        <h2>What I do</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem deserunt dicta dignissimos dolores ducimus
+            eum facilis harum iste nobis pariatur porro, quia, rem sapiente sed similique sit unde. Animi debitis, eos
+            eum ipsum nesciunt odio officiis quam rerum sit vero?
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam autem consequuntur cumque error
+            ipsum nihil non officia suscipit tenetur. Consequuntur cum eos est harum, natus omnis recusandae saepe sint
+            totam veniam? Cumque distinctio dolor esse, eum harum in maiores minus optio porro possimus quae rem
+            similique vel. Asperiores commodi dolores eaque fuga hic iusto laboriosam modi nihil perspiciatis porro,
+            quae quasi qui quibusdam quo repellat tempora veniam voluptates voluptatibus?</p>
+    </section>
+{% endblock %}

@@ -1,0 +1,695 @@
+.kord-navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 600;
+    width: 100%;
+    transition: all ease-in-out 0.3s;
+    background: #1b4d9d;
+
+    &::after {
+        content: "";
+        height: 2.95em;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        transition: all ease-in-out 0.3s;
+        opacity: 1;
+        top: 0em;
+        background: #213e73;
+    }
+
+    ul {
+        margin: 0;
+        list-style: none;
+    }
+
+    .main-navbar {
+        order: 1;
+        position: relative;
+
+        .container {
+            display: flex;
+            position: relative;
+
+            .left-section {
+                .logo-wrapper {
+                    transition: all ease-in-out 0.3s;
+                    padding: 0.68em 0;
+                    margin-bottom: 0em;
+
+                    a {
+                        img {
+                            width: 4.68em;
+                            transition: all ease-in-out 0.3s;
+                        }
+                    }
+                }
+            }
+
+            .middle-section {
+                display: flex;
+                flex-direction: column;
+                margin: 0.65em auto 0 2.12em;
+                transition: all ease-in-out 0.3s;
+                display: flex;
+                flex-direction: column;
+
+                .other-links {
+                    margin: 0;
+                    list-style: none;
+                    display: flex;
+                    order: 1;
+
+                    li {
+                        & + li {
+                            margin-left: 1.18em;
+                        }
+                        a {
+                            //font-weight: bold;
+                            font-size: 0.812em;
+                            color: #ffffff;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                .menu-links {
+                    margin: 0;
+                    list-style: none;
+                    transition: all ease-in-out 0.3s;
+                    margin-top: 0.8em;
+                    border-top: 1px solid transparent;
+                    order: 2;
+                    padding-top: 0.5em;
+
+                    & > li {
+                        float: left;
+                        & > .parent-title {
+                            a {
+                                color: #fff;
+                                font-size: 1.06em;
+                                text-decoration: none;
+                                transition: all ease-in-out 0.3s;
+                                position: relative;
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    background: rgba(255, 255, 255, 0.1);
+                                    width: 0%;
+                                    left: 0;
+                                    height: 2px;
+                                    border-radius: 0 0 10px 10px;
+                                    transition: all ease-in-out 0.3s;
+                                }
+                            }
+                            .kord-icon-down {
+                                display: none;
+                            }
+                        }
+
+                        &.has-sub-menu {
+                            a {
+                                &::before {
+                                    content: none;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            & > .parent-title {
+                                a {
+                                    color: #af2b3d;
+
+                                    &::before {
+                                        width: 100%;
+                                        background: rgba(255, 255, 255, 0.3);
+                                    }
+                                }
+                            }
+                        }
+
+                        & + li {
+                            margin-left: 1.06em;
+                        }
+
+                        &:hover {
+                            .parent-sub-menu {
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+
+                        .parent-sub-menu {
+                            position: absolute;
+                            visibility: collapse;
+                            opacity: 0;
+                            transition: all ease-in-out 0.3s;
+                            display: block;
+                            right: 0;
+                            left: 7.8em;
+
+                            & > .sub-menu {
+                                background: #fff;
+                                list-style: none;
+                                margin: 0;
+                                margin-top: 0.8em;
+                                filter: drop-shadow(0.31em 0.625em 0.93em rgba(0, 38, 135, 0.25));
+                                display: flex;
+                                padding: 1.8em 0.9em;
+
+                                & > ul {
+                                    width: 25%;
+                                    margin: 0;
+                                    list-style: none;
+                                    padding: 0 0.84em;
+
+                                    & > li {
+                                        width: 13.68em;
+
+                                        & + li {
+                                            padding-top: 1.8em;
+                                        }
+
+                                        .parent-title {
+                                            border-bottom: 1px solid #213e73;
+                                            padding-bottom: 0.6em;
+                                            margin-bottom: 0.55em;
+                                            display: flex;
+                                            justify-content: space-between;
+
+                                            & > a {
+                                                color: #af2b3d;
+                                                font-size: 0.81em;
+                                                margin-left: 1em;
+                                                text-decoration: none;
+                                            }
+                                            .kord-icon-down {
+                                                font-size: 0.9em;
+                                                margin-right: 1em;
+                                                transform: translateY(0.1em);
+                                                cursor: pointer;
+                                                transition: all ease-in-out 0.3s;
+                                                &::before {
+                                                    color: #213e73;
+                                                }
+                                                &.is-target-visible {
+                                                    transform: rotateX(180deg) translateY(0.3em);
+                                                }
+                                            }
+                                        }
+
+                                        .sub-sub-menu {
+                                            li {
+                                                & > a {
+                                                    color: #213e73;
+                                                    font-size: 0.81em;
+                                                    margin-left: 1em;
+                                                    text-decoration: none;
+                                                }
+                                                & + li {
+                                                    margin-top: 0.25em;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right-section {
+                margin-top: 0.65em;
+                transition: all ease-in-out 0.3s;
+                .tools {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    height: max-content;
+                    transition: all ease-in-out 0.3s;
+                    order: 3;
+
+                    .user {
+                        display: flex;
+                        align-items: center;
+                        margin-left: 1.75em;
+                        order: 2;
+                        cursor: pointer;
+                        .kord-icon-user {
+                            font-size: 1.2em;
+                            &::before {
+                                color: #fff;
+                                transition: all ease-in-out 0.3s;
+                            }
+                        }
+                    }
+
+                    .lang {
+                        display: flex;
+                        align-items: center;
+                        margin-left: 1.87em;
+                        order: 3;
+                        color: #fff;
+
+                        .kord-icon-lang {
+                            font-size: 1.1em;
+                            margin-left: 0.5em;
+
+                            &::before {
+                                transition: all ease-in-out 0.3s;
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    .kord-icon-open-menu {
+                        order: 4;
+                        display: none;
+                    }
+
+                    & > .kord-icon-search {
+                        transition: all ease-in-out 0.5s;
+                        font-size: 1.2em;
+                        order: 1;
+                        cursor: pointer;
+
+                        &::before {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .toggle-box {
+        order: 2;
+    }
+
+    .search-box {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        height: 16.62em;
+        width: 100%;
+        order: 2;
+        transition: all ease-in-out 0.3s;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            margin-top: 7.5em;
+            .kord-icon-close {
+                position: absolute;
+                right: 15px;
+                top: 0;
+                font-size: 1.3em;
+                cursor: pointer;
+
+                &::before {
+                    //font-weight: bold;
+                    color: #fff;
+                }
+            }
+
+            .liferay-search {
+                margin-top: 3.5em;
+                display: flex;
+                align-items: center;
+                height: 2.56em;
+                width: 26.31em;
+                background: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+
+                .parent-icon {
+                    background: #af2b3d;
+                    height: 100%;
+                    min-width: 5.18em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    .kord-icon-search {
+                        font-size: 1.2em;
+                    }
+                }
+
+                input[type="search"] {
+                    border: 0;
+                    outline: 0;
+                    background: transparent;
+                    color: #fff;
+                    font-size: 0.875em;
+                    padding-left: 1em;
+                    width: 100%;
+                    overflow: hidden;
+                    transition: all ease-in-out 0.4s;
+
+                    &::placeholder {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        &::before {
+            content: "";
+            background: rgba(33, 62, 115, 0.9);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &.is-visible {
+            opacity: 1;
+            visibility: visible;
+
+            & ~ .main-navbar .middle-section .menu-links {
+                opacity: 0.1;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .kord-navbar {
+        position: sticky;
+        top: 0;
+        background: #213e73;
+
+        &::before,
+        &::after {
+            content: none !important;
+        }
+
+        .search-box,
+        .tools .kord-icon-search {
+            display: none !important;
+        }
+
+        .main-navbar {
+            border-bottom: 5px solid #af2b3d;
+            .container {
+                align-items: center;
+                .left-section {
+                    .logo-wrapper {
+                        padding: 0.9em 0;
+                        margin-bottom: 0em;
+                        a {
+                            img {
+                                width: 4.81em;
+                            }
+                        }
+                    }
+                }
+                .right-section {
+                    margin-top: 0;
+                    .tools {
+                        .kord-icon-open-menu {
+                            display: block;
+                            transform: rotateY(180deg);
+                            margin-left: 1.87em;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .toggle-box {
+            width: 23em;
+            position: absolute !important;
+            z-index: 1;
+            top: 100%;
+            right: 0;
+            max-width: 100%;
+            max-height: calc(100vh - 15em);
+            overflow-y: scroll;
+            filter: drop-shadow(0.31em 0.625em 0.93em rgba(0, 38, 135, 0.25));
+
+            .main-box {
+                .parent-liferay-search {
+                    padding: 1.3em 0;
+                    background: #213e73;
+                    display: flex;
+                    justify-content: center;
+
+                    .liferay-search {
+                        display: flex;
+                        align-items: center;
+                        border-radius: 50%;
+                        height: 2.2em;
+                        padding: 0 0.7em;
+                        transition: all ease-in-out 0.3s;
+                        position: relative;
+                        z-index: 605;
+                        border-radius: 1em;
+                        background: #fff;
+                        max-width: 100%;
+                        width: 18.37em;
+
+                        .kord-icon-search {
+                            transition: all ease-in-out 0.5s;
+                            font-size: 1.1em;
+                            span {
+                                &::before {
+                                    color: #213e73;
+                                }
+                            }
+                        }
+
+                        input[type="search"] {
+                            border: 0;
+                            outline: 0;
+                            background: transparent;
+                            color: #213e73;
+                            font-size: 13px;
+                            width: 100%;
+                            overflow: hidden;
+                            transition: all ease-in-out 0.4s;
+
+                            &::placeholder {
+                                color: #213e73;
+                            }
+                        }
+                    }
+                }
+
+                .other-links {
+                    list-style: none;
+                    width: 100%;
+                    padding: 0.3em 0.9em 0.5em 0.9em;
+                    background: #fff;
+                    margin: 0;
+                    border-top: 0.1em solid #af2b3d;
+
+                    & > .link {
+                        z-index: 1001;
+                        text-decoration: none;
+                        position: relative;
+                        padding: 0;
+                        text-align: center;
+                        border-bottom: 0.1em solid #213e73;
+                        margin: auto;
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                        a {
+                            color: #af2b3d;
+                            padding: 0.7em 1em;
+                            display: block;
+                            font-size: 13px;
+                            text-decoration: none;
+                            text-align: left;
+                            width: max-content;
+                            transition: all ease-in-out 0.3s;
+                            order: 1;
+                        }
+                    }
+                }
+
+                .menu-links {
+                    list-style: none;
+                    width: 100%;
+                    padding: 0.9em 0.9em 0.3em 0.9em;
+                    background: #fff;
+                    margin: 0;
+
+                    & > .link {
+                        z-index: 1001;
+                        text-decoration: none;
+                        position: relative;
+                        padding: 0;
+                        text-align: center;
+                        border-bottom: 0.1em solid #213e73;
+                        margin: auto;
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+
+                        & > .parent-title {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 0.7em 1em;
+
+                            a {
+                                color: #af2b3d;
+                                display: block;
+                                font-size: 13px;
+                                text-decoration: none;
+                                text-align: left;
+                                width: max-content;
+                                transition: all ease-in-out 0.3s;
+                                order: 1;
+                            }
+
+                            .kord-icon-down {
+                                cursor: pointer;
+                                order: 2;
+                                transition: all ease-in-out 0.3s;
+                                display: inline-block;
+                                line-height: 0;
+                                font-size: 0.9em;
+                                &::before {
+                                    color: #213e73;
+                                }
+
+                                &.is-target-visible {
+                                    transform: rotateX(180deg) translateY(-0.05em);
+                                }
+                            }
+                        }
+
+                        .parent-sub-menu {
+                            & > .sub-menu {
+                                list-style: none;
+                                margin: 0;
+                                padding: 0;
+                                border-top: 0.1em solid #213e73;
+                                & > ul > li,
+                                & > li {
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    &:first-child {
+                                        margin-top: 0.85em;
+                                    }
+                                    &:last-child {
+                                        margin-bottom: 0.85em;
+                                    }
+
+                                    .parent-title {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        padding: 0 1em;
+                                        & > a {
+                                            text-decoration: none;
+                                            font-size: 13px;
+                                            color: #213e73;
+                                            transition: all ease-in-out 0.2s;
+                                            margin: 0;
+                                            text-align: left;
+                                            transition: all ease-in-out 0.3s;
+                                        }
+                                        .kord-icon-down {
+                                            cursor: pointer;
+                                            order: 2;
+                                            transition: all ease-in-out 0.3s;
+                                            display: inline-block;
+                                            line-height: 0;
+                                            font-size: 0.8em;
+                                            margin-top: -0.25em;
+                                            &::before {
+                                                color: #213e73;
+                                            }
+
+                                            &.is-target-visible {
+                                                transform: rotateX(180deg) translateY(-0.15em);
+                                            }
+                                        }
+                                    }
+
+                                    & + li {
+                                        margin-top: 0.85em;
+                                    }
+
+                                    // & > .sub-menu,
+                                    & > .sub-sub-menu {
+                                        list-style: none;
+                                        margin: 0;
+
+                                        li {
+                                            text-align: left;
+                                            margin-bottom: 0.2em;
+                                            a {
+                                                padding: 0 1em;
+                                                color: #213e73;
+                                                font-size: 13px;
+                                                text-decoration: none;
+                                                margin-left: 0.9em;
+                                                transition: all ease-in-out 0.3s;
+                                            }
+
+                                            &:first-child {
+                                                margin-top: 0.5em;
+                                            }
+                                            &:last-child {
+                                                margin-bottom: 0.2em;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .kord-navbar {
+        font-size: 15px;
+
+        .main-navbar {
+            .container {
+                .left-section {
+                    .logo-wrapper {
+                        padding: 0.6em 0;
+                        a {
+                            img {
+                                width: 4.6em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .kord-navbar {
+        font-size: 13px;
+    }
+}

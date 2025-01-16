@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %} days {% endblock %}
+
+{% block header_references %}
+    <link rel="stylesheet" href="{% static 'challenges\challenges.css' %}">
+    <link rel="stylesheet" href="{% static 'challenges\header.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    {% include "includes/header.html" with active_page="days list" %}
+    <ul>
+        {% for day in data %}
+            <li>
+                <a href="{% url 'days-of-week' day %}"> {{ day|title }} </a>
+            </li>
+
+        {% endfor %}
+    </ul>
+{% endblock %}
+days
+

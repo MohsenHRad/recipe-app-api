@@ -1,0 +1,100 @@
+.calendar-po {
+    background: #213e73;
+    padding: 4.678em 0 3.43em 0;
+
+    .parent-more {
+        display: flex;
+        justify-content: center;
+
+        .more {
+            background: #af2b3d;
+            padding: 0.65em 1.2em;
+            min-width: 11em;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.93em;
+            text-align: center;
+            margin-top: 3.25em;
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    .calendar-po {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .calendar-po {
+        font-size: 12px;
+    }
+}
+
+.calendar {
+    width: 45.87em;
+    max-width: 100%;
+    margin: auto;
+
+    .parent-titles {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2.18em;
+
+        div {
+            font-size: 1.25em;
+            color: #ffffff;
+        }
+    }
+
+    .calendar-items {
+        .item {
+            display: flex;
+            justify-content: space-between;
+
+            & + .item {
+                margin-top: 0.812em;
+            }
+
+            & > div {
+                flex-grow: 0;
+            }
+
+            & > div:nth-child(2) {
+                background: #fff;
+                color: #213e73;
+                //font-weight: bold;
+                width: 100%;
+                text-align: center;
+                padding: 0.4em;
+
+                & > div {
+                    font-size: 1em;
+                }
+            }
+
+            & > div:nth-child(1),
+            & > div:nth-child(3) {
+                padding: 0.4em;
+                width: 8.81em;
+                min-width: 8.81em;
+                text-align: center;
+                background: #af2b3d;
+                box-shadow: 0px 0.25em 0.625em rgba(0, 0, 0, 0.05);
+
+                & > div {
+                    font-size: 1.12em;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    .calendar {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .calendar {
+        font-size: 10px;
+    }
+}

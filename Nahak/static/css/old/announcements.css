@@ -1,0 +1,216 @@
+.announcements-po {
+  padding: 3em 0 4em 0;
+  background: #dfeafd;
+}
+
+.announcements-po .po-title {
+  font-size: 2.06em;
+  margin-bottom: 1.24em;
+  text-align: center;
+  color: #213e73;
+}
+
+.announcements-po .parent-more {
+  display: flex;
+  justify-content: center;
+}
+
+.announcements-po .parent-more .more {
+  background: #af2b3d;
+  padding: 0.65em 1.2em;
+  min-width: 11em;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.93em;
+  text-align: center;
+  margin-top: 3.46em;
+}
+
+@media only screen and (max-width: 767px) {
+  .announcements-po {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .announcements-po {
+    font-size: 13px;
+    padding-bottom: 3.2em;
+  }
+  .announcements-po .po-title {
+    font-size: 1.8em;
+  }
+  .announcements-po .parent-more .more {
+    margin-top: 3.2em;
+  }
+}
+
+.announcements-items .has-photo .item {
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0px 1px 0.31em rgba(0, 0, 0, 0.1);
+  height: 7.125em;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.announcements-items .has-photo .item::before {
+  position: absolute;
+  top: 1.2em;
+  bottom: 1.2em;
+  content: "";
+  right: calc(-1em + 2px);
+  width: 1em;
+  background: #2c5093;
+  border-radius: 5px;
+}
+
+.announcements-items .has-photo .item .parent-img {
+  min-width: 10.18em;
+  width: 10.18em;
+  height: 100%;
+}
+
+.announcements-items .has-photo .item .parent-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.announcements-items .has-photo .item .title {
+  font-size: 1em;
+  line-height: 1.37em;
+  margin: 1.81em 1.31em 0 1.31em;
+  color: #213e73;
+  height: 2.6em;
+  overflow: hidden;
+}
+
+.announcements-items .has-photo .item .date {
+  font-size: 0.562em;
+  color: #2c5093;
+  text-align: right;
+  margin: 1.9em 2.22em 0 2.22em;
+}
+
+.announcements-items .has-photo .item .date .kord-icon-time {
+  margin-right: 0.5em;
+  position: relative;
+  top: 0.02em;
+}
+
+.announcements-items .has-photo .item .date .kord-icon-time::before {
+  color: #2c5093;
+}
+
+.announcements-items .has-photo .item + .item {
+  margin-top: 1.562em;
+}
+
+.announcements-items .no-photo {
+  background: #ffffff;
+  box-shadow: 0px 1px 0.31em rgba(0, 0, 0, 0.1);
+  height: 15.81em;
+  position: relative;
+  overflow: hidden;
+  padding: 1.5em 1.8em 0 1.8em;
+}
+
+.announcements-items .no-photo::before {
+  position: absolute;
+  top: 2.5em;
+  bottom: 2.5em;
+  content: "";
+  right: calc(-1em + 2px);
+  width: 1em;
+  background: #2c5093;
+  border-radius: 5px;
+}
+
+.announcements-items .no-photo .item {
+  border-bottom: 1px solid #d3d3d3;
+  display: block;
+  text-decoration: none;
+}
+
+.announcements-items .no-photo .item:last-child {
+  border-bottom: none;
+}
+
+.announcements-items .no-photo .item:last-child .date {
+  margin-bottom: 0;
+}
+
+.announcements-items .no-photo .item + .item {
+  margin-top: 0.8em;
+}
+
+.announcements-items .no-photo .item .title {
+  font-size: 1em;
+  line-height: 1.37em;
+  color: #213e73;
+  height: 2.6em;
+  overflow: hidden;
+  margin: 0;
+}
+
+.announcements-items .no-photo .item .date {
+  font-size: 0.562em;
+  color: #2c5093;
+  text-align: right;
+  margin: 0.3em 0 0.6em 0;
+}
+
+.announcements-items .no-photo .item .date .kord-icon-time {
+  margin-right: 0.5em;
+  position: relative;
+  top: 0.02em;
+}
+
+.announcements-items .no-photo .item .date .kord-icon-time::before {
+  color: #2c5093;
+}
+
+@media only screen and (max-width: 992px) and (min-width: 767px) {
+  .announcements-items {
+    font-size: 14px;
+  }
+  .announcements-items .has-photo .item .parent-img {
+    min-width: 7.18em;
+    width: 7.18em;
+    height: 100%;
+  }
+  .announcements-items .has-photo .item .title {
+    margin: 1.81em 0.8em 0 0.8em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .announcements-items {
+    font-size: 15px;
+  }
+  .announcements-items > div:nth-child(1) {
+    margin-bottom: 1.56em;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .announcements-items {
+    font-size: 13px;
+  }
+  .announcements-items .has-photo .item {
+    height: 6.125em;
+  }
+  .announcements-items .has-photo .item .parent-img {
+    min-width: 8em;
+    width: 8em;
+    height: 100%;
+  }
+  .announcements-items .has-photo .item .title {
+    margin: 1em 0.8em 0 0.8em;
+  }
+  .announcements-items .has-photo .item .date {
+    margin: 1.3em 2.22em 0 2.22em;
+  }
+}

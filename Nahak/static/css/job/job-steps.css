@@ -1,0 +1,402 @@
+@charset "UTF-8";
+.job-steps {
+  font-size: 15px;
+  padding: 1em 0 2em 0;
+}
+
+.job-steps .yellow-box {
+  position: relative;
+  z-index: 1;
+}
+
+.job-steps .yellow-box::before {
+  content: "";
+  position: absolute;
+  background: #ffc180;
+  border-radius: 1.875em;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  top: 9.93em;
+  z-index: -1;
+}
+
+.job-steps .header .img-wr {
+  width: 29.37em;
+  max-width: 100%;
+  height: 37.5em;
+  overflow: hidden;
+  border-radius: 25em 25em 0 0;
+  margin: auto;
+  border: 0.625em solid #119699;
+  position: relative;
+  padding: 1em;
+}
+
+.job-steps .header .img-wr::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.job-steps .header .img-wr img,
+.job-steps .header .img-wr div {
+  width: 100%;
+  background-size: cover;
+  border-radius: 25em 25em 0 0;
+  height: 100%;
+  box-shadow: -0.375em 0.93em 1.43em rgba(0, 0, 0, 0.25);
+}
+
+.job-steps .header .img-wr img::before,
+.job-steps .header .img-wr div::before {
+  background: inherit;
+  content: "";
+  left: 0;
+  right: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.1;
+  z-index: -1;
+  object-position: bottom;
+}
+
+.job-steps .header .texts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.875em;
+  margin-bottom: 4em;
+}
+
+.job-steps .header .texts h3,
+.job-steps .header .texts h5 {
+  margin-bottom: 0;
+  ont-weight: 700;
+  color: #119699;
+}
+
+.job-steps .header .texts .help {
+  font-size: 1.812em;
+  color: #ffffff;
+}
+
+.job-steps .header .texts .title {
+  font-size: 2.875em;
+}
+
+.job-steps .header .texts .sub-title {
+  font-weight: 400;
+  font-size: 1.375em;
+}
+
+.job-steps .steps {
+  display: flex;
+  flex-wrap: wrap;
+  counter-reset: steps;
+  position: relative;
+}
+
+.job-steps .steps > div {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  z-index: unset !important;
+}
+
+.job-steps .steps > div > .step-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.job-steps .steps > div:nth-child(2)::before, .job-steps .steps > div:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-image: linear-gradient(#ffc180 0em, transparent 20em, transparent calc(100% - 20em), #ffc180), linear-gradient(#ffd7ae 1.562em, rgba(255, 255, 255, 0) 0%);
+  background-position: left 0.562em;
+  background-size: 1px 100%, 1px 3.125em;
+  background-repeat: repeat-y;
+}
+
+@media only screen and (max-width: 991px) {
+  .job-steps .steps > div:nth-child(3)::before {
+    content: none;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .job-steps .steps > div::before {
+    content: none !important;
+  }
+}
+
+.job-steps .steps > div::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  content: "";
+  background-image: linear-gradient(90deg, #ffc180 0em, transparent 40%, transparent 60%, #ffc180), linear-gradient(to right, #ffd7ae 1.562em, rgba(255, 255, 255, 0) 0%);
+  background-size: 100% 1px, 3.125em 1px;
+  background-repeat: repeat-x;
+  background-position: 0.562em top;
+}
+
+@media only screen and (min-width: 991px) {
+  .job-steps .steps > div:nth-last-child(-n + 3)::after {
+    content: none !important;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 575px) {
+  .job-steps .steps > div:nth-last-child(-n + 2)::after {
+    content: none !important;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .job-steps .steps > div:last-of-type::after {
+    content: none !important;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  .job-steps .steps > div:nth-child(6n - 3) > div::after, .job-steps .steps > div:nth-child(6n - 1) > div::after {
+    z-index: 1;
+    position: relative;
+    content: "";
+    color: #fff;
+    display: block;
+    font-size: 2em;
+    width: 0.69em;
+    height: 0.69em;
+    margin-bottom: -0.69em;
+    background: url(../../images/job/add.svg) no-repeat;
+    background-size: cover;
+    transform: translate3d(calc(50% - 1px), -50%, 0);
+  }
+  .job-steps .steps > div:nth-last-child(-n + 3) > div::after {
+    content: none !important;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .job-steps {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .job-steps {
+    font-size: 12px;
+  }
+  .job-steps .steps > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .job-steps .header .texts {
+    margin-top: 3em;
+    margin-bottom: 2em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .job-steps {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .job-steps .header .texts {
+    font-size: 0.9em;
+  }
+  .job-steps .steps > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 27.62em;
+  text-align: center;
+  position: relative;
+  padding: 1.5em;
+  font-size: 15px;
+}
+
+.step:hover .img-wr::before {
+  transform: translate3d(0, -50%, 0) scale(1.2);
+  transform-origin: left center;
+}
+
+.step .img-wr {
+  margin-bottom: 3.75em;
+  position: relative;
+}
+
+.step .img-wr img {
+  width: 3.93em;
+}
+
+.step .img-wr::before,
+.step .para::before {
+  counter-increment: steps;
+  content: "0" counter(steps);
+  font-weight: 700;
+  font-size: 4.5em;
+  color: #fb782f;
+  opacity: 0.2;
+  position: absolute;
+  left: calc(100% + 0.05em);
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  transition: all ease-out 0.3s;
+}
+
+.step .para::before {
+  counter-increment: none;
+}
+
+.step h5 {
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #119699;
+  max-width: 14em;
+  margin-bottom: 0;
+}
+
+.step .para {
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 1.83em;
+  color: #ffffff;
+  width: 14.77em;
+  max-width: 100%;
+  margin-top: 1.15em;
+}
+
+.step .para::before {
+  opacity: 0;
+}
+
+.step.latest {
+  row-gap: 2.3em;
+  padding: 1.5em 1.8em;
+  align-items: flex-start;
+}
+
+.step.latest .para {
+  position: relative;
+  margin-top: 0;
+  line-height: 2.55em;
+  width: unset;
+  text-align: right;
+}
+
+.step.latest .para::before {
+  all: unset;
+  content: "اتمام";
+  position: absolute;
+  font-weight: 700;
+  font-size: 5.75em;
+  color: #fb782f;
+  opacity: 0.1;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  z-index: -1;
+  margin-right: 0.1em;
+}
+
+.step.latest a {
+  background: #fff;
+  border-radius: 0.625em;
+  color: #119699;
+  text-decoration: none;
+  padding: 0.97em 1.3em;
+  font-weight: 500;
+  display: block;
+  max-width: 100%;
+  min-width: 14em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1em;
+  font-size: 1.125em;
+}
+
+.step.latest a::after {
+  content: "";
+  width: 1.35em;
+  height: 1.35em;
+  background: url(../../images/job/Arrow-Left.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: block;
+  transition: all ease-in-out 0.2s;
+}
+
+@media only screen and (max-width: 1279px) {
+  .step {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .step {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .step {
+    min-height: unset;
+  }
+  .step.latest {
+    padding: 3.5em 1.3em 2em 1.3em;
+  }
+  .step.latest a {
+    width: 100%;
+    font-size: 1.225em;
+  }
+  .step:not(.latest) {
+    flex-direction: row;
+    column-gap: 1.33em;
+    position: relative;
+    justify-content: unset;
+    padding: 3.5em 1.3em;
+  }
+  .step:not(.latest) * {
+    text-align: right;
+  }
+  .step:not(.latest) .img-wr {
+    margin-bottom: 0;
+  }
+  .step:not(.latest) .img-wr::before {
+    visibility: collapse;
+    opacity: 0;
+  }
+  .step:not(.latest) .texts {
+    flex-grow: 1;
+  }
+  .step:not(.latest) .para {
+    position: relative;
+    width: 100%;
+  }
+  .step:not(.latest) .para::before {
+    opacity: 0.2;
+    left: 0;
+    top: 0;
+    transform: translate3d(0, calc(-100% - 0.2em), 0);
+    font-size: 4em;
+  }
+}

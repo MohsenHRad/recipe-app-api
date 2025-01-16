@@ -1,0 +1,25 @@
+body {
+    background: #ffffff;
+}
+
+@font-face {
+    font-family: Rabar;
+    src: url("../fonts/IRANSans/Farsi_numerals/webFonts/fonts/ttf/IRANSansWeb\(FaNum\)_Light.ttf");
+    font-weight: 1 499;
+}
+
+@font-face {
+    font-family: Rabar;
+    src: url("../fonts/IRANSans/Farsi_numerals/webFonts/fonts/ttf/IRANSansWeb\(FaNum\)_Medium.ttf");
+    font-weight: 500 599;
+}
+
+@font-face {
+    font-family: Rabar;
+    src: url("../fonts/IRANSans/Farsi_numerals/webFonts/fonts/ttf/IRANSansWeb\(FaNum\)_Bold.ttf");
+    font-weight: 600 1000;
+}
+
+* {
+    font-family: Rabar !important;
+}

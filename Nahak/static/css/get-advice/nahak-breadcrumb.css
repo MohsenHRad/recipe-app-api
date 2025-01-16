@@ -1,0 +1,275 @@
+.co-info {
+  font-size: 15px;
+  padding-bottom: 3.25em;
+}
+
+.co-info .co-header {
+  position: relative;
+  padding-top: 2.5em;
+}
+
+.co-info .co-header::before {
+  content: "";
+  position: absolute;
+  background: url(../../images/display-page/dp-bg.png) no-repeat, url(../../images/about-nahak/Star.png) no-repeat, #119699;
+  background-position: calc(50% - 15em) 2em, 1.87em 1.2em;
+  background-size: 6.25em, 1.875em;
+  top: 0;
+  bottom: 5.5em;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.co-info .co-header .container {
+  display: flex;
+  background-size: 6.25em;
+  background-position: 30% 1.5em;
+  column-gap: 1.45em;
+}
+
+.co-info .co-header .container .col-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.co-info .co-header .container .col-one .consultant-image {
+  float: left;
+  padding: 0.65em;
+  position: relative;
+  width: fit-content;
+}
+
+.co-info .co-header .container .col-one .consultant-image::before, .co-info .co-header .container .col-one .consultant-image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border: 0.312em solid #f4b067;
+  border-radius: 5.8em 5.8em 0 0;
+  z-index: 3;
+}
+
+.co-info .co-header .container .col-one .consultant-image::before {
+  background: url(../../images/consultant/bg-1.svg) no-repeat;
+  background-size: 99%;
+  background-position: center;
+  z-index: 1;
+}
+
+.co-info .co-header .container .col-one .consultant-image .img-wrapper {
+  border-radius: 5.3em 5.3em 0 0;
+  width: 10.37em;
+  height: 15.87em;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: -2.37em;
+  position: relative;
+  z-index: 2;
+}
+
+.co-info .co-header .container .col-one .consultant-image .img-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.37em;
+  background: linear-gradient(rgba(255, 255, 255, 0.87), #fff);
+}
+
+.co-info .co-header .container .col-one .consultant-image .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.co-info .co-header .container .col-two {
+  margin-top: 0.8em;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.co-info .co-header .container .col-two .info-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.co-info .co-header .container .col-two .info-wrapper .back-btn {
+  cursor: pointer;
+  margin-bottom: 1.9em;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+}
+
+.co-info .co-header .container .col-two .info-wrapper .back-btn span {
+  font-weight: 300;
+  font-size: 1em;
+  color: #f2f7fa;
+}
+
+.co-info .co-header .container .col-two .info-wrapper .back-btn svg {
+  width: 1.1em;
+  height: 1.1em;
+  stroke: #fff;
+  fill: #fff;
+}
+
+.co-info .co-header .container .col-two .info-wrapper > h3 {
+  font-weight: 700;
+  font-size: 2.375em;
+  line-height: 1.5em;
+  color: #ffc484;
+  margin: 0;
+}
+
+.co-info .co-header .container .col-two .info-wrapper .specialty {
+  background: rgba(251, 120, 47, 0.1);
+  border-radius: 0.625em;
+  padding: 1em 1.78em;
+  width: fit-content;
+  margin-top: 4.125em;
+}
+
+.co-info .co-header .container .col-two .info-wrapper .specialty span {
+  font-weight: 700;
+  font-size: 1.125em;
+  color: #fb782f;
+}
+
+.co-info .co-header .container .col-three .breadcrumb-wrapper {
+  margin-top: 6em;
+  flex-shrink: 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .co-info {
+    font-size: 13px;
+  }
+  .co-info .co-header .container .col-two {
+    flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 575px) {
+  .co-info .co-header .container .col-three {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .co-info .co-header .container .col-two .info-wrapper > h3 {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .co-info .back-btn {
+    display: none !important;
+  }
+  .co-info .co-header::before {
+    height: 18em;
+    bottom: unset;
+    background-size: 6.25em, 0;
+    background-position: 15% 3em;
+  }
+  .co-info .co-header .container {
+    flex-direction: column;
+  }
+  .co-info .co-header .container .col-three {
+    order: 1;
+  }
+  .co-info .co-header .container .col-one,
+  .co-info .co-header .container .col-two {
+    order: 2;
+    align-items: center;
+  }
+  .co-info .co-header .container .col-three .breadcrumb-wrapper {
+    margin: 2.5em 0 2.7em 0;
+  }
+  .co-info .co-header .container .col-two {
+    border-bottom: 1px solid rgba(156, 176, 185, 0.6);
+  }
+  .co-info .co-header .container .col-two .info-wrapper {
+    align-items: center;
+    margin-top: 1.7em;
+  }
+  .co-info .co-header .container .col-two .info-wrapper > h3 {
+    font-weight: 700;
+    font-size: 1.7em;
+    color: #03191d;
+    text-align: center;
+  }
+  .co-info .co-header .container .col-two .info-wrapper .specialty {
+    margin: 3em 0;
+    font-size: 0.9em;
+  }
+}
+
+.contact-section {
+  background: rgba(251, 120, 47, 0.1);
+  border-radius: 0.875em;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6em 2.43em;
+}
+
+.contact-section .title {
+  display: flex;
+  column-gap: 1.12em;
+  align-items: center;
+}
+
+.contact-section .title svg {
+  stroke: #fb782f;
+  fill: none;
+  width: 2.437em;
+  height: 2.437em;
+}
+
+.contact-section .title span {
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #fb782f;
+}
+
+.contact-section .number {
+  font-weight: 500;
+  font-size: 1.812em;
+  color: #fb782f;
+}
+
+@media only screen and (max-width: 991px) {
+  .contact-section {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contact-section {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .contact-section {
+    padding: 2em 2.43em;
+    font-size: 13px;
+    flex-direction: column;
+    row-gap: 2em;
+  }
+  .contact-section .title {
+    flex-direction: column;
+    row-gap: 1.5em;
+  }
+}
+
+.form-wrapper {
+  margin: 4.8em 0 3.3em 0;
+}

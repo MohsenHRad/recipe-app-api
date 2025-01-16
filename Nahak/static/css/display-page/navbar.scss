@@ -1,0 +1,72 @@
+.nahak-navbar {
+    background: #3da9ac !important;
+    border-bottom: 0 !important;
+    .main-navbar {
+        @media only screen and (min-width: 1279px) {
+            padding: 1.8em 0;
+        }
+
+        .container {
+            .right-section .tools {
+                .parent-search .parent-liferay-search .liferay-search {
+                    &:hover svg {
+                        stroke: #4d6071;
+                    }
+                    svg {
+                        stroke: #fff;
+                    }
+                }
+                .login {
+                    background: #ffc484;
+                }
+                .job-re {
+                    background: rgba(242, 247, 250, 0.3);
+                    span {
+                        color: #fff;
+                    }
+                    svg {
+                        stroke: #fff;
+                    }
+                }
+            }
+            .left-section {
+                .menu-icon {
+                    stroke: #fff;
+                }
+                .logo-wrapper {
+                    img {
+                        &.white-logo {
+                            display: block;
+                        }
+                        &.green-logo {
+                            display: none;
+                        }
+                    }
+
+                    .title {
+                        span {
+                            color: #f2f7fa;
+                            &:last-child {
+                                color: #f2f7fa;
+                            }
+                        }
+                    }
+                }
+            }
+            .middle-section .menu-links > li {
+                &.active {
+                    .parent-title a {
+                        color: #f2f7fa;
+                    }
+                }
+                & > .parent-title a {
+                    color: #f2f7fa;
+
+                    &::after {
+                        content: none !important;
+                    }
+                }
+            }
+        }
+    }
+}

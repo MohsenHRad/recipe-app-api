@@ -1,0 +1,313 @@
+.jobs-sw-wrapper {
+    overflow: hidden;
+    position: relative;
+    font-size: 15px;
+    .jobs-sw {
+        width: 100%;
+        overflow: visible;
+        margin: 7em 0 3em 0;
+
+        .swiper-slide {
+            overflow: visible;
+            position: relative;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            text-decoration: none;
+
+            &:not(.swiper-slide-visible) .job {
+                opacity: 0 !important;
+            }
+
+            .job {
+                height: 100%;
+                display: flex;
+                transition: all ease-out 0.8s;
+                background: url(../../images/about/Vector.png) no-repeat,
+                    url(../../images/about/job-sw-bg.svg) no-repeat,
+                    radial-gradient(68.41% 787.7% at 23.18% 59.9%, #ffa757 0%, #ff9330 100%);
+                background-size: 150vw 140vh, 20.37em;
+                background-position: 85% center, 30%;
+                border-radius: 1.87em;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .content {
+                    padding: 2em 4em;
+                    max-width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 1.75em;
+                    background: url(../../images/about/flash-bg.svg) no-repeat left 65%;
+                    background-size: 9.68em;
+
+                    h3 {
+                        font-weight: 700;
+                        font-size: 2.75em;
+                        color: #ffffff;
+                        margin-bottom: 0;
+                    }
+
+                    .para {
+                        font-weight: 400;
+                        font-size: 1.125em;
+                        line-height: 2.94em;
+                        color: #ffffff;
+                    }
+
+                    .more {
+                        display: block;
+                        width: fit-content;
+                        display: flex;
+                        overflow: hidden;
+
+                        &::after {
+                            content: "";
+                            height: 4.68em;
+                            width: 4.3em;
+                            display: block;
+                            background: url(../../images/about/btn-bg-2.png) no-repeat;
+                            background-size: 100% 100%;
+                            border-radius: 2.8em 0 0 2.8em;
+                            margin-right: -1px;
+                            flex-shrink: 0;
+                        }
+                        a {
+                            font-weight: 500;
+                            font-size: 1.5em;
+                            color: #fb782f;
+                            background: #fff;
+                            padding: 0 1.37em 0 0.7em;
+                            display: flex;
+                            align-items: center;
+                            border-radius: 0 2.8em 2.8em 0;
+                            position: relative;
+                            text-decoration: none;
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                background: red;
+                                top: 0;
+                                right: 100%;
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+
+                .job-image {
+                    display: flex;
+                    align-items: center;
+                    height: 23.5em;
+
+                    .image-desc {
+                        background: #fff;
+                        border-radius: 7.5em;
+                        padding: 1.56em 4em 1.56em 1.56em;
+                        margin: 0 -4em 5.5em 2.12em;
+                        max-width: 14em;
+                        min-width: 11em;
+                        align-self: flex-end;
+
+                        span {
+                            font-weight: 400;
+                            font-size: 1.187em;
+                            color: #000000;
+                        }
+                    }
+
+                    .img-wrapper {
+                        position: relative;
+                        height: 29.7em;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 23em 23em 0 0;
+                        border: 0.19em solid #fff;
+                        box-shadow: -3px 7px 6px rgba(0, 0, 0, 0.02);
+
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            right: -5.5em;
+                            top: 5em;
+                            background: url(../../images/about/emoji.png) no-repeat;
+                            width: 7.9em;
+                            height: 6.31em;
+                            background-size: contain;
+                            filter: drop-shadow(-3px 7px 12px rgba(0, 0, 0, 0.1));
+                        }
+
+                        img {
+                            width: 23em;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 23em 23em 0 0;
+
+                            &:nth-of-type(1) {
+                                transform: translate(1em, -1em);
+                                position: relative;
+                                z-index: 1;
+                            }
+                            &:nth-of-type(2) {
+                                position: absolute;
+                                transform: translate(0.5em, -0.5em);
+                                opacity: 0.3;
+                                filter: blur(4px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .jobs-pagination {
+        z-index: 5;
+        margin: 1.5em 3.5em 0 0;
+        display: flex;
+        width: fit-content !important;
+        column-gap: 0.32em;
+
+        .swiper-pagination-bullet {
+            width: 0.4em;
+            height: 0.4em;
+            background: #c2c9d6;
+            opacity: 0.9;
+            border-radius: 3px;
+            margin: 0 !important;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #119699;
+            width: 1.37em;
+        }
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .jobs-sw-wrapper {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .jobs-sw-wrapper {
+        font-size: 12px;
+
+        .jobs-sw {
+            @media only screen and (min-width: 767px) {
+                margin: 3.5em 0 3em 0;
+            }
+            .swiper-slide .job {
+                .content {
+                    max-width: unset;
+                    padding: 2em 2em;
+                    background: none;
+                }
+                .job-image {
+                    @media only screen and (min-width: 767px) {
+                        flex-direction: row-reverse;
+                        font-size: 0.8em;
+                        margin-left: 1em;
+
+                        .image-desc {
+                            margin: 0 0 0 -2em;
+                            padding: 1.56em 1.56em 1.56em 4em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .jobs-sw-wrapper {
+        font-size: 12px;
+
+        .jobs-sw {
+            .swiper-slide .job {
+                flex-direction: column-reverse;
+                row-gap: 2.5em;
+                background-size: 300% 200%, 20.37em;
+                background-position: 40% 35%, 130% 30%;
+
+                .content {
+                    padding-top: 0;
+
+                    .more {
+                        a {
+                            border-radius: 0 13px 13px 0;
+                            padding: 0 1em 0 0.7em;
+                        }
+                        &::after {
+                            border-radius: 13px 0 0 13px;
+                        }
+                    }
+                }
+
+                .job-image {
+                    height: unset;
+                    margin-top: -2.8em;
+
+                    .image-desc {
+                        margin: 0 -4em 5.5em -4.5em;
+                    }
+                }
+            }
+            .jobs-pagination {
+                font-size: 1.3em;
+                margin: 1.6em auto 0 auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .jobs-sw-wrapper {
+        .jobs-sw .swiper-slide .job {
+            .content {
+                padding: 0 1.5em 1.5em 1.5em;
+
+                h3 {
+                    position: relative;
+                    width: fit-content;
+                    &::after {
+                        content: "";
+                        background: url(../../images/about/flash-bg-sm.png) no-repeat;
+                        width: 300px;
+                        height: 100%;
+                        position: absolute;
+                        right: calc(100% + 0.5em);
+                        background-size: 35%;
+                        background-position: center right;
+                    }
+                }
+            }
+            .job-image {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .jobs-sw-wrapper {
+        .jobs-sw .swiper-slide .job {
+            .job-image {
+                font-size: 0.8em;
+                .img-wrapper {
+                    &::before {
+                        content: none;
+                    }
+                }
+                .image-desc {
+                    display: none;
+                }
+            }
+        }
+    }
+}

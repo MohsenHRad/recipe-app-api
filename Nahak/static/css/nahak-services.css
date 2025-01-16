@@ -1,0 +1,175 @@
+.nahak-services {
+  padding: 4.5em 0 4.5em 0;
+  overflow: hidden;
+  position: relative;
+  font-size: 15px;
+}
+
+.nahak-services .po-title {
+  margin: auto;
+  font-weight: bold;
+  font-size: 3.06em;
+  color: #000000;
+  position: relative;
+  display: block;
+  width: max-content;
+}
+
+.nahak-services .po-title::before {
+  content: "";
+  width: 1.22em;
+  height: 0.81em;
+  background: url(../images/home/Sparkle.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  right: -0.2em;
+  bottom: calc(100% + 0.12em);
+  display: block;
+  position: absolute;
+}
+
+.nahak-services .po-subtitle {
+  font-size: 1.125em;
+  color: #4d6071;
+  text-align: center;
+  margin: 1.2em 0 3em 0;
+}
+
+.nahak-services .service-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 -1.75em;
+  row-gap: 3em;
+}
+
+.nahak-services .service-items > div {
+  flex: 0 0 25%;
+  padding: 0 1.75em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nahak-services .service-items > div img {
+  width: 8.5em;
+  max-width: 100%;
+  margin-bottom: 1.37em;
+}
+
+.nahak-services .service-items > div .texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nahak-services .service-items > div .texts h3 {
+  font-weight: 700;
+  font-size: 1.37em;
+  color: #03191d;
+  margin-bottom: 0.7em;
+}
+
+.nahak-services .service-items > div .texts p {
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.875em;
+  color: #495961;
+  margin-bottom: 1.7em;
+}
+
+.nahak-services .service-items > div .texts a {
+  font-weight: 500;
+  font-size: 0.93em;
+  text-align: center;
+  color: #7a8c9c;
+  display: flex;
+  align-items: center;
+  column-gap: 0.6em;
+  text-decoration: none;
+  transition: all ease-in-out 0.2s;
+}
+
+.nahak-services .service-items > div .texts a:hover {
+  color: #fb782f;
+}
+
+.nahak-services .service-items > div .texts a:hover::after {
+  filter: none;
+}
+
+.nahak-services .service-items > div .texts a::after {
+  content: "";
+  width: 20px;
+  height: 18px;
+  background: url(../images/home/arrow-left.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: block;
+  filter: grayscale(1);
+  transition: all ease-in-out 0.2s;
+}
+
+@media only screen and (max-width: 1279px) {
+  .nahak-services .service-items > div {
+    flex: 0 0 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .nahak-services {
+    font-size: 14px;
+  }
+  .nahak-services .po-title {
+    font-size: 2.6em;
+  }
+  .nahak-services .service-items {
+    margin: 0 -1em;
+  }
+  .nahak-services .service-items > div {
+    padding: 0 1em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nahak-services {
+    font-size: 13px;
+  }
+  .nahak-services .service-items > div {
+    flex: 0 0 50%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .nahak-services {
+    font-size: 13px;
+    padding-top: 5em;
+  }
+  .nahak-services .service-items {
+    row-gap: 2.3em;
+  }
+  .nahak-services .service-items > div {
+    flex: 0 0 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 2.5em;
+  }
+  .nahak-services .service-items > div img {
+    margin: 0;
+    width: 7.8em;
+  }
+  .nahak-services .service-items > div .texts {
+    align-items: flex-start;
+  }
+  .nahak-services .service-items > div .texts h3 {
+    font-size: 1.3em;
+  }
+  .nahak-services .service-items > div .texts p {
+    text-align: unset;
+    margin-bottom: 0;
+    font-size: 0.93em;
+  }
+  .nahak-services .service-items > div .texts a {
+    display: none;
+  }
+}

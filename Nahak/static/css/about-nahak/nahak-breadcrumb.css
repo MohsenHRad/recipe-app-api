@@ -1,0 +1,73 @@
+.nahak-breadcrumb {
+  background-color: #119699;
+  font-size: 15px;
+}
+
+.nahak-breadcrumb .container {
+  display: flex;
+  align-items: flex-end;
+  background: url(../../images/display-page/dp-bg.png) no-repeat;
+  background-size: 6.25em;
+  background-position: 30% 1.5em;
+  min-height: 12.31em;
+  position: relative;
+}
+
+.nahak-breadcrumb .container::before {
+  content: "";
+  position: absolute;
+  width: 1.9em;
+  height: 1.9em;
+  background: url(../../images/about-nahak/Star.png);
+  background-size: contain;
+  background-position: center;
+  bottom: 1em;
+  right: 30%;
+}
+
+.nahak-breadcrumb .container > div {
+  padding: 2.68em 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2em;
+}
+
+.nahak-breadcrumb .container > div > h3 {
+  font-weight: 700;
+  font-size: 3em;
+  color: #ffc484;
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .nahak-breadcrumb {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nahak-breadcrumb {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .nahak-breadcrumb .container {
+    background-position: 4.5em 1.6em;
+  }
+  .nahak-breadcrumb .container::before {
+    bottom: -0.6em;
+    right: unset;
+    left: 1.5em;
+  }
+  .nahak-breadcrumb .container > div {
+    flex-direction: column-reverse;
+    row-gap: 1.4em;
+    align-items: flex-start;
+  }
+  .nahak-breadcrumb .container > div > h3 {
+    font-size: 2.5em;
+  }
+}

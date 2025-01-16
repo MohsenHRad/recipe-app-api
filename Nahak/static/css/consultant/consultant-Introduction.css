@@ -1,0 +1,502 @@
+.consultant .co-Introduction {
+  font-size: 15px;
+  padding: 2em 0 0 0;
+}
+
+@media only screen and (min-width: 1279px) {
+  .consultant .co-Introduction .col-video {
+    padding: 4.56em 2.5em 0 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.consultant .co-Introduction .about-video {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4.37em;
+  background: #119699;
+  box-shadow: 2.18em -1.81em 0 rgba(217, 217, 217, 0.2);
+  margin: 2.18em 1.81em 0 0;
+  max-width: 35.3em;
+}
+
+.consultant .co-Introduction .about-video::before {
+  content: "";
+  background: #03191d;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: all ease-in-out 0.5s;
+}
+
+.consultant .co-Introduction .about-video .parent-icon {
+  position: absolute;
+  transition: all ease-in-out 0.5s;
+  z-index: 2;
+  top: 50%;
+  cursor: pointer;
+  transform: translate3d(0, -50%, 0);
+  width: 7.5em;
+  height: 7.5em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.consultant .co-Introduction .about-video .parent-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.consultant .co-Introduction .about-video.active-video .parent-icon, .consultant .co-Introduction .about-video.active-video::before {
+  opacity: 0;
+  visibility: collapse;
+}
+
+.consultant .co-Introduction .about-video.active-video video {
+  object-fit: contain;
+}
+
+.consultant .co-Introduction .about-video video {
+  height: 41.31em;
+  width: 100%;
+  object-fit: cover;
+}
+
+.consultant .co-Introduction .col-main .consultant-image {
+  float: left;
+  padding: 0.65em;
+  position: relative;
+}
+
+.consultant .co-Introduction .col-main .consultant-image::before, .consultant .co-Introduction .col-main .consultant-image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border: 5px solid #fb782f;
+  border-radius: 5.8em 5.8em 0 0;
+  z-index: 3;
+}
+
+.consultant .co-Introduction .col-main .consultant-image::before {
+  background: url(../../images/consultant/bg-1.svg) no-repeat;
+  background-size: 99%;
+  background-position: center;
+  z-index: 1;
+}
+
+.consultant .co-Introduction .col-main .consultant-image .img-wrapper {
+  border-radius: 5.3em 5.3em 0 0;
+  width: 10.37em;
+  height: 15.87em;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: -2.37em;
+  position: relative;
+  z-index: 2;
+}
+
+.consultant .co-Introduction .col-main .consultant-image .img-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.37em;
+  background: linear-gradient(rgba(255, 255, 255, 0.87), #fff);
+}
+
+.consultant .co-Introduction .col-main .consultant-image .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.consultant .co-Introduction .col-main .specialty {
+  background: rgba(251, 120, 47, 0.1);
+  border-radius: 0.625em;
+  padding: 1em 1.78em;
+  width: fit-content;
+  margin-bottom: 3.4em;
+  margin-top: 5.5em;
+}
+
+.consultant .co-Introduction .col-main .specialty span {
+  font-weight: 700;
+  font-size: 1.125em;
+  color: #fb782f;
+}
+
+.consultant .co-Introduction .col-main .title {
+  font-weight: 700;
+  font-size: 2.62em;
+  color: #03191d;
+  margin-bottom: 1em;
+}
+
+.consultant .co-Introduction .col-main .para {
+  font-size: 1em;
+  color: #4d6071;
+  line-height: 3.4em;
+  font-weight: 400;
+}
+
+.consultant .co-Introduction .col-main .more {
+  background: #119699;
+  border-radius: 0.625em;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.9em 1.5em;
+  font-weight: 500;
+  display: block;
+  width: max-content;
+  min-width: 14em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1em;
+  font-size: 1.125em;
+  margin-top: 3.12em;
+}
+
+.consultant .co-services {
+  padding: 6.5em 0 0 0;
+  overflow: hidden;
+  position: relative;
+  font-size: 15px;
+  background: url(../../images/consultant/services-bg-2.svg) no-repeat;
+  background-position: calc(50% + min(39em, 40vw)) 2em;
+  background-size: 24.3em;
+}
+
+.consultant .co-services .po-title {
+  margin: auto;
+  font-weight: bold;
+  font-size: 3.87em;
+  color: #000000;
+  position: relative;
+  display: block;
+  width: max-content;
+}
+
+.consultant .co-services .po-title::before {
+  content: "";
+  width: 1.22em;
+  height: 0.81em;
+  background: url(../../images/home/Sparkle.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  right: -0.2em;
+  bottom: 100%;
+  display: block;
+  position: absolute;
+}
+
+.consultant .co-services .po-subtitle {
+  font-size: 1.56em;
+  color: #4d6071;
+  text-align: center;
+  margin: 1em 0 3.8em 0;
+}
+
+.consultant .co-services .se-items {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 3.37em;
+  position: relative;
+}
+
+.consultant .co-services .se-items::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14.81em;
+  height: 14.81em;
+  background: url(../../images/consultant/services-bg.svg);
+  background-size: cover;
+  transform: translate3d(calc(-50% + 1.5em), -50%, 0);
+  z-index: -1;
+}
+
+.consultant .co-services .se-items > div {
+  padding: 2.31em;
+  border: 1px solid #7a8c9c;
+  border-radius: 2.5em;
+  background-repeat: no-repeat !important;
+  background-position: left bottom !important;
+  background-size: 22.5em !important;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 2.5em;
+  column-gap: 2.5em;
+}
+
+.consultant .co-services .se-items > div > .title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.125em;
+  color: #119699;
+}
+
+.consultant .co-services .se-items > div .more {
+  color: #fb782f;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5em;
+  font-size: 1.25em;
+}
+
+.consultant .co-services .se-items > div .more::after {
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  background: url(../../images/consultant/ArrowLeft.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: block;
+  transition: all ease-in-out 0.2s;
+}
+
+.consultant .co-services .se-items > div .se-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.4em;
+  column-gap: 5.4em;
+}
+
+.consultant .co-services .se-items > div .se-wrapper .se-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.8em;
+}
+
+.consultant .co-services .se-items > div .se-wrapper .se-info > .title {
+  display: flex;
+  align-items: center;
+  column-gap: 0.625em;
+}
+
+.consultant .co-services .se-items > div .se-wrapper .se-info > .title h5 {
+  font-weight: 500;
+  font-size: 1.25em;
+  color: #131628;
+  margin-bottom: 0;
+}
+
+.consultant .co-services .se-items > div .se-wrapper .se-info > .title img {
+  width: 2em;
+}
+
+.consultant .co-services .se-items > div .se-wrapper .se-info .infos {
+  display: flex;
+  column-gap: 2.75em;
+  row-gap: 1.5em;
+  flex-wrap: wrap;
+}
+
+.consultant .co-services .se-items > div .se-wrapper .se-info .infos .info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 0.6em;
+}
+
+.consultant .co-services .se-items > div .se-wrapper .se-info .infos .info:not(.bool) {
+  column-gap: 1.31em;
+}
+
+.consultant .co-services .se-items > div .se-wrapper .se-info .infos .info:not(.bool) span:first-of-type {
+  font-weight: 500;
+  font-size: 1.25em;
+  color: #9ba2b1;
+}
+
+.consultant .co-services .se-items > div .se-wrapper .se-info .infos .info:not(.bool) span:last-of-type {
+  font-weight: 400;
+  font-size: 1.25em;
+  color: #1d3557;
+}
+
+.consultant .co-services .se-items > div .se-wrapper .se-info .infos .info:not(.bool) p {
+  font-weight: 400;
+  font-size: 1.0625em;
+  line-height: 2.35em;
+  color: #4d6071;
+  max-width: 48em;
+  margin-bottom: 0;
+}
+
+.consultant .co-services .se-items > div .se-wrapper .se-info .infos .info.bool {
+  column-gap: 0.5em;
+}
+
+.consultant .co-services .se-items > div .se-wrapper .se-info .infos .info.bool svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.consultant .co-services .se-items > div .se-wrapper .se-info .infos .info.bool span {
+  font-weight: 400;
+  font-size: 1.25em;
+  color: #4d6071;
+}
+
+.consultant .request-btn {
+  box-shadow: 0px -20px 40px rgba(0, 0, 0, 0.04);
+  padding: 1.63em 0 7em 0;
+  margin-top: 2.75em;
+  font-size: 15px;
+}
+
+.consultant .request-btn a {
+  background: #119699;
+  border-radius: 0.625em;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4em;
+  column-gap: 1em;
+  text-decoration: none;
+}
+
+.consultant .request-btn a svg {
+  width: 1.7em;
+  height: 1.7em;
+}
+
+.consultant .request-btn a span {
+  font-weight: 500;
+  font-size: 1.375em;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 1279px) {
+  .consultant .co-Introduction {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .consultant .co-Introduction {
+    font-size: 14px;
+  }
+  .consultant .co-Introduction .container .row .col-video {
+    padding-top: 5em;
+  }
+  .consultant .co-Introduction .container .row .col-video .about-video {
+    margin: auto;
+  }
+  .consultant .co-services,
+  .consultant .request-btn {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .consultant .co-Introduction {
+    font-size: 13px;
+  }
+  .consultant .co-services {
+    font-size: 13px;
+    background: none;
+  }
+  .consultant .co-services .po-title {
+    font-size: 2.5em;
+  }
+  .consultant .co-services .po-subtitle {
+    font-size: 1.4em;
+  }
+  .consultant .co-services .se-items::before {
+    content: none;
+  }
+  .consultant .co-services .se-items > div {
+    background: none !important;
+  }
+  .consultant .co-services .se-items > div > .title {
+    order: 1;
+  }
+  .consultant .co-services .se-items > div .se-wrapper {
+    order: 2;
+  }
+  .consultant .co-services .se-items > div .more {
+    order: 3;
+    margin: auto;
+  }
+  .consultant .request-btn {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .consultant .co-Introduction .container .row .col-main {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .consultant .co-Introduction .container .row .col-main .consultant-image {
+    float: unset;
+  }
+  .consultant .co-Introduction .container .row .col-main .specialty {
+    margin-bottom: 3.4em;
+    margin-top: 4em;
+  }
+  .consultant .co-Introduction .container .row .col-main .more {
+    width: 100%;
+    font-size: 1.25em;
+    margin-top: 1.6em;
+  }
+  .consultant .co-Introduction .container .row .col-main > .title {
+    font-size: 2.3em;
+  }
+  .consultant .co-Introduction .container .row .col-video {
+    padding-top: 1em;
+    padding-bottom: 2.5em;
+  }
+  .consultant .co-Introduction .container .row .col-video .about-video {
+    box-shadow: unset;
+    border-radius: 2.5em;
+  }
+  .consultant .co-Introduction .container .row .col-video .about-video video {
+    height: 34.31em;
+  }
+  .consultant .co-Introduction .container .row .col-video .about-video .parent-icon {
+    width: 6.5em;
+    height: 6.5em;
+  }
+  .consultant .co-services .se-items > div {
+    padding: 2em 1.55em;
+    border-radius: 1.5em;
+    border-color: rgba(122, 140, 156, 0.2);
+  }
+  .consultant .co-services .se-items > div > .title {
+    font-size: 1.65em;
+  }
+  .consultant .co-services .se-items > div .se-wrapper .se-info .infos .info:not(.bool) span:last-of-type {
+    font-size: 1.1em;
+  }
+  .consultant .request-btn {
+    padding: 1.63em 0 4em 0;
+  }
+}

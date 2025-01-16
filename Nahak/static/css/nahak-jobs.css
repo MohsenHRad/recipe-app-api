@@ -1,0 +1,209 @@
+.nahak-jobs-po {
+  background: url(../images/home/jobs-bg.png);
+  background-repeat: no-repeat;
+  background-size: 6.25em;
+  padding: 4em 0 4em 0;
+  font-size: 15px;
+}
+
+.nahak-jobs-po .title-wrapper {
+  position: relative;
+  width: max-content;
+  margin: 0 auto 2em auto;
+}
+
+.nahak-jobs-po .title-wrapper .po-title {
+  font-weight: bold;
+  font-size: 2.9em;
+  color: #000000;
+  z-index: 2;
+  position: relative;
+}
+
+.nahak-jobs-po .title-wrapper::before {
+  content: "";
+  width: 5.21em;
+  font-size: 2.9em;
+  height: 1.47em;
+  transform: translate3d(-50%, -50%, 0);
+  background: url(../images/home/title-bg.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  left: 50%;
+  top: 50%;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.nahak-jobs-po .po-subtitle {
+  font-size: 1.125em;
+  color: #4d6071;
+  text-align: center;
+  margin: 0 0 3em 0;
+}
+
+.nahak-jobs-po a.more {
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .nahak-jobs-po {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nahak-jobs-po {
+    font-size: 13px;
+  }
+  .nahak-jobs-po .title-wrapper {
+    font-size: 0.85em;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .nahak-jobs-po {
+    background: transparent;
+  }
+  .nahak-jobs-po a.more {
+    font-size: 1.12em;
+    background: #fff;
+    border-radius: 0.625em;
+    border: 1px solid #119699;
+    color: #119699;
+    text-decoration: none;
+    padding: 1.1em 1.5em;
+    font-weight: 400;
+    display: block;
+    width: max-content;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 24em;
+    margin: 2.3em auto 0 auto;
+  }
+}
+
+.nahak-jobs {
+  row-gap: 2.5em;
+  font-size: 15px;
+}
+
+.nahak-jobs .job {
+  display: flex;
+  flex-direction: column;
+}
+
+.nahak-jobs .job > img {
+  filter: drop-shadow(0.18em 1em 2.1em rgba(0, 0, 0, 0.13));
+  border-radius: 0.625em;
+  width: calc(100% - 1.25em);
+  height: 25.93em;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+.nahak-jobs .job .white-box {
+  background: #ffffff;
+  border: 1px solid rgba(194, 201, 214, 0.4);
+  box-shadow: 0px 11px 14px 2px rgba(0, 0, 0, 0.03);
+  border-radius: 0.625em;
+  width: calc(100% - 1.25em);
+  margin-top: -7.5em;
+  position: relative;
+  padding: 1.31em;
+}
+
+.nahak-jobs .job .white-box a {
+  font-weight: 400;
+  font-size: 1.12em;
+  color: #119699;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+  margin-top: 1.5em;
+  text-decoration: none;
+}
+
+.nahak-jobs .job .white-box a::after {
+  content: "";
+  width: 1em;
+  height: 0.7em;
+  background: url(../images/home/arrow-left-green.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: block;
+  transition: all ease-in-out 0.2s;
+}
+
+.nahak-jobs .job .white-box .content {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 1.31em;
+}
+
+.nahak-jobs .job .white-box .content > img {
+  width: 3.31em;
+  flex-shrink: 0;
+}
+
+.nahak-jobs .job .white-box .content .texts {
+  flex-grow: 1;
+}
+
+.nahak-jobs .job .white-box .content .texts > div {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1em;
+  margin-bottom: 1em;
+}
+
+.nahak-jobs .job .white-box .content .texts > div h3 {
+  font-weight: 500;
+  font-size: 1.5em;
+  line-height: 0.75em;
+  color: #000000;
+  margin: 0;
+}
+
+.nahak-jobs .job .white-box .content .texts > div span {
+  font-weight: 700;
+  font-size: 1.62em;
+  color: #495961;
+  line-height: 1em;
+  opacity: 0.3;
+}
+
+.nahak-jobs .job .white-box .content .texts p {
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 2em;
+  color: #4d6071;
+  margin: 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .nahak-jobs {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nahak-jobs {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .nahak-jobs {
+    width: 29em;
+    margin: auto;
+    max-width: 100%;
+  }
+  .nahak-jobs > div:nth-of-type(n + 4) {
+    display: none;
+  }
+}
