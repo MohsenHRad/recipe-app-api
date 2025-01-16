@@ -85,23 +85,6 @@ class LoginView(View):
             user = login_form.cleaned_data['user']
             login(request, user)
             return redirect('home_page')
-            # user_password = login_form.cleaned_data['password']
-            # print(f'user: {user} password: {user_password}')
-            # user: User = User.objects.filter(Q(email__iexact=user_email) | Q(mobile__iexact=user_mobile)).first()
-        #
-        #     if user:
-        #         if not user.is_active:
-        #             return HttpResponse('کاربر غیر فعال است', status=403)
-        #
-        #         is_password_correct = user.check_password(user_password)
-        #         if is_password_correct:
-        #             login(request, user)
-        #             return redirect('home_page')
-        #     else:
-        #         login_form.add_error('password', 'کاربر یافت نشد')
-        # else:
-        #     print(f"Errors: {login_form.errors}")  # چاپ ارورهای فرم برای بررسی
-        #     print(request.POST)
 
         context = {
             'login_form': login_form,
