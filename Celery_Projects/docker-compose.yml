@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7.2-alpine
+
+
+  django:
+    image: eshop_django
+    container_name: django_celery_project
+    build:
+      context: ./eshop
+      dockerfile: DockerFile
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./eshop:/app
+    ports:
+      - "8000:8000" # دومی شماره پورت خود برنامه هست که توی کامندت تعریفش کردی
+    environment:
+      - ALLOWED_HOSTS=localhost,127.0.0.1
+      - DEBUG=True
+      - SECRET_KEY=django-insecure-!3%$(0imzt7pp_8uu9ea374uny=yof47)l@5sz1ca7yt&=0j-z
+    depends_on:
+      - redis
+      - rabbitmq
+
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports:
+      - '8080:5672'
+      - '8081:15672'
+
+  celery:
+    container_name: celery
+    build:
+      context: ./eshop
+      dockerfile: DockerFile
+    command: celery --app=config worker -l INFO -Q tasks
+    volumes:
+      - ./eshop:/app
+    #    ports:
+    #      - "8000:8000" # دومی شماره پورت خود برنامه هست که توی کامندت تعریفش کردی
+    environment:
+      - ALLOWED_HOSTS=localhost,127.0.0.1
+      - DEBUG=True
+      - SECRET_KEY=django-insecure-!3%$(0imzt7pp_8uu9ea374uny=yof47)l@5sz1ca7yt&=0j-z
+    depends_on:
+      - redis
+      - django
+
+  flower:
+    image: mher/flower
+    ports:
+      - '5555:5555'
+    environment:
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672/
+#  stand_alone_celery:
+#    container_name: stand_alone_celery
+#    build:
+#      context: ./celery_worker
+#      dockerfile: DockerFile
+#    command: celery -A celery_base worker -l INFO -Q celery,celery:1,celery:2,celery:3
+#    volumes:
+#      - ./celery_worker:/app
+#    #    ports:
+#    #      - "8000:8000" # دومی شماره پورت خود برنامه هست که توی کامندت تعریفش کردی
+#    environment:
+#      - BROKER_URL=redis://redis:6379/0
+#      - RESULT_BACKEND=redis://redis:6379/0
+#    depends_on:
+#      - redis
+#      - django
