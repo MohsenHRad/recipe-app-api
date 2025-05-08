@@ -1,7 +1,10 @@
 ---
 name: checks
 
-on: [ push ]
+on:
+  push:
+    paths:
+      - 'django-rest-api/**'
 
 jobs:
   test-lint:
