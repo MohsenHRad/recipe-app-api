@@ -5,7 +5,7 @@ from django.urls import (
     path,
     include
 )
-from app.recipe import views
+from recipe import views
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()

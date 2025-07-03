@@ -10,6 +10,7 @@ services:
       - "9000:8000"
     volumes:
       - ./app:/app
+    working_dir: /app
     command: >
       sh -c "python manage.py wait_for_db &&
              python manage.py migrate &&
